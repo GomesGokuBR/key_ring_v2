@@ -1,0 +1,13 @@
+{
+  "appId": "io.ionic.starter",
+  "appName": "2_TROUSSEAU_DE_CLE",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0
+    }
+  },
+  "cordova": {}
+}
