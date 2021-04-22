@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="ion-text-center">Clées</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="addLogin()">
+        <ion-icon slot="icon-only" name="add"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row class="ion-justify-content-center">
+      <ion-col size="12" *ngFor="let login of getLogins()">
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>{{ login.url }}</ion-card-title>
+            <ion-card-title>{{ login.email }}</ion-card-title>
+            <ion-card-subtitle>{{ login.password }}</ion-card-subtitle>
+            <ion-item button (click)="delLogin(login.id)">
+              <ion-label class="ion-text-end" color="warning">Supprimer</ion-label>
+            </ion-item>
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-fab vertical="bottom" horizontal="center" slot="fixed">
+    <ion-fab-button>
+      <ion-icon name="add" (click)="addLogin()"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
